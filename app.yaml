@@ -1,0 +1,15 @@
+name: coolerdepot-demo
+region: nyc
+static_sites:
+  - name: coolerdepot-demo
+    github:
+      repo: snkrpapi212/coolerdepot-demo
+      branch: master
+    source_dir: /
+    output_dir: dist
+    build_command: npm ci && npm run build
+    environment_slug: node-js
+    routes:
+      - path: /
+    index_document: index.html
+    error_document: 404.html
